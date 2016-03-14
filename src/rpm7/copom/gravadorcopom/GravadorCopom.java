@@ -5,6 +5,8 @@
  */
 package rpm7.copom.gravadorcopom;
 
+import rpm7.copom.gravadorcopom.modelos.Voicerlib;
+
 /**
  *
  * @author Adriano
@@ -15,7 +17,10 @@ public class GravadorCopom {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        String versao = "";
+        short info = 0;
+        short i = Voicerlib.INSTANCIA.dg_GetLibVersion(versao, info);
+        System.out.println(versao + info);
     }
     
 }
