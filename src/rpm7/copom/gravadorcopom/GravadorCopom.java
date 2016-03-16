@@ -5,6 +5,9 @@
  */
 package rpm7.copom.gravadorcopom;
 
+import com.sun.jna.Memory;
+import com.sun.jna.Pointer;
+import com.sun.jna.ptr.PointerByReference;
 import rpm7.copom.gravadorcopom.modelos.Voicerlib;
 
 /**
@@ -17,10 +20,5 @@ public class GravadorCopom {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String versao = "";
-        short info = 0;
-        short i = Voicerlib.INSTANCIA.dg_GetLibVersion(versao, info);
-        System.out.println(versao + info);
     }
-    
 }
